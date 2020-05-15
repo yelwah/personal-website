@@ -10,45 +10,25 @@ class Experience extends Component {
   }
   render() {
     return (
-      <div class="primary">
+      <div class="primary" id="experience">
         <div class="content">
-          <div class="h1-primary">Experience</div>
-          <div class="h2-primary">Education & Employment</div>
-          <hr class="hr-primary"></hr>
-          <div class="h3-primary">Education</div>
-          <div class="body-primary">
+          <h1>Experience</h1>
+          <h2>Education & Employment</h2>
+          <hr></hr>
+          <h3>Education</h3>
+          <p>
             <table>
-              <tr>
-                <td class="td-left-title">Rancocas Valley</td>
-                <td class="td-right-title">High School</td>
+              <tr class="title">
+                <td>University of Delaware</td>
+                <td>Computer Science BS</td>
               </tr>
-              <tr>
-                <td class="td-left-detail">
-                  Mount Holly, NJ
-                  <br></br>
-                  2011-2015
-                </td>
-                <td class="td-right-detail">
-                  <ul>
-                    <li>Earned a 3.87 GPA and was rank 17 of 479</li>
-                    <li>Led the Men's Swimming and Tennis teams as Captain</li>
-                  </ul>
-                </td>
-              </tr>
-              <tr class="spacer">
-                <br></br>
-              </tr>
-              <tr>
-                <td class="td-left-title">University of Delaware</td>
-                <td class="td-right-title">Computer Science BS</td>
-              </tr>
-              <tr>
-                <td class="td-left-detail">
+              <tr class="detail">
+                <td>
                   Newark, DE
                   <br></br>
                   2015-2019
                 </td>
-                <td class="td-right-detail">
+                <td>
                   <ul>
                     <li>Concentration in Leadership & Business Management</li>
                     <li>Earned a 3.43 GPA</li>
@@ -72,23 +52,43 @@ class Experience extends Component {
                   </ul>
                 </td>
               </tr>
+              <tr class="title">
+                <td class="col-width">Rancocas Valley</td>
+                <td>High School</td>
+              </tr>
+              <tr class="detail">
+                <td>
+                  Mount Holly, NJ
+                  <br></br>
+                  2011-2015
+                </td>
+                <td>
+                  <ul>
+                    <li>Earned a 3.87 GPA and was rank 17 of 479</li>
+                    <li>Led the Men's Swimming and Tennis teams as Captain</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr class="spacer">
+                <br></br>
+              </tr>
               <tr class="spacer">
                 <br></br>
               </tr>
             </table>
-            <div class="h3-primary">Experience</div>
+            <h3>Experience</h3>
             <table>
-              <tr>
-                <td class="td-left-title">General Dynamics</td>
-                <td class="td-right-title">Software Engineer</td>
+              <tr class="title">
+                <td class="col-width">General Dynamics</td>
+                <td>Software Engineer</td>
               </tr>
-              <tr>
-                <td class="td-left-detail">
+              <tr class="detail">
+                <td>
                   Pittsburgh, PA
                   <br></br>
                   10/19-3/20
                 </td>
-                <td class="td-right-detail">
+                <td>
                   <ul>
                     <li>
                       Developing automated deployment process to create configurable, cloud-based,
@@ -113,17 +113,17 @@ class Experience extends Component {
               <tr class="spacer">
                 <br></br>
               </tr>
-              <tr>
-                <td class="td-left-title">Lockheed Martin</td>
-                <td class="td-right-title">Software Engineering Intern (Jr/Sr)</td>
+              <tr class="title">
+                <td>Lockheed Martin</td>
+                <td>Software Engineering Intern (Jr/Sr)</td>
               </tr>
-              <tr>
-                <td class="td-left-detail">
+              <tr class="detail">
+                <td>
                   Moorestown, NJ
                   <br></br>
                   06/18-08/18
                 </td>
-                <td class="td-right-detail">
+                <td>
                   <ul>
                     <li>
                       With Navy customer collaboration, created a new UI teaching application for
@@ -149,17 +149,17 @@ class Experience extends Component {
               <tr class="spacer">
                 <br></br>
               </tr>
-              <tr>
-                <td class="td-left-title">Lockheed Martin</td>
-                <td class="td-right-title">Software Engineering Intern (Soph/Jr)</td>
+              <tr class="title">
+                <td>Lockheed Martin</td>
+                <td>Software Engineering Intern (Soph/Jr)</td>
               </tr>
-              <tr>
-                <td class="td-left-detail">
+              <tr class="detail">
+                <td>
                   Moorestown, NJ
                   <br></br>
                   06/17-08/17
                 </td>
-                <td class="td-right-detail">
+                <td>
                   <ul>
                     <li>
                       Led a team of interns to design and create a C++ model of the vertical missile
@@ -176,18 +176,20 @@ class Experience extends Component {
                 </td>
               </tr>
             </table>
-          </div>
+          </p>
           <div class="icon-tray">
-            <a
-              href="https://www.linkedin.com/in/jared-hawley-a6094112a/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <div class="linkedIn-icon-button">
-                <img class="circle-icon-green" src={linkedInIcon}></img>
-                Check me out on LinkedIn!
-              </div>
-            </a>
+            <div class="slider-button-container">
+              <a
+                href="https://www.linkedin.com/in/jared-hawley-a6094112a/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div class="slider-button">
+                  <img class="circle-icon" src={linkedInIcon} alt="LinkedIn icon"></img>
+                  <div class="button-text">Check me out on LinkedIn!</div>
+                </div>
+              </a>
+            </div>
           </div>
         </div>
       </div>

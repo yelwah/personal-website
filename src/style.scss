@@ -1,0 +1,362 @@
+// COLORS
+$dark-green: #639a67;
+$medium-green: #94b691;
+$light-green: #a8cea5;
+$cream: #faf4ed;
+$cream: #faf4ed;
+$cream-o50: #faf4ed7e;
+$medium-gray: #626262;
+
+/* ### GENERAL THEMEING ######################################################################## */
+
+// Font
+@font-face {
+  font-family: "Montserrat";
+  src: local("Monterrat"), url(./fonts/Montserrat-Regular.ttf) format("truetype");
+}
+
+// Circle Icon
+.circle-icon {
+  width: 76px;
+  border-radius: 100%;
+  position: absolute;
+  left: 0;
+}
+
+// Slider Button
+.slider-button {
+  white-space: nowrap;
+  border-radius: 50px;
+  width: 76px;
+  transition: 0.2s;
+  overflow: hidden;
+  height: 76px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.slider-button:hover {
+  transition: 0.3s;
+  width: 420px;
+  max-width: none;
+  cursor: pointer;
+}
+
+// Simple Centered Div to put the buttons on
+.slider-button-container {
+  border-width: 1px;
+  width: 300px;
+  float: left;
+  justify-content: center;
+  display: flex;
+  height: 76px;
+}
+
+.icon-tray {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+// Text
+h1 {
+  font-size: 50px;
+  text-align: center;
+  padding-top: 10px;
+}
+
+h2 {
+  font-size: 25px;
+  text-align: center;
+  margin-top: 5px;
+  padding-bottom: 10px;
+}
+
+h3 {
+  font-size: 30px;
+  text-align: left;
+  padding-top: 10px;
+}
+p {
+  color: black;
+  font-size: 15px;
+  text-align: left;
+  padding-top: 5px;
+}
+.indent {
+  text-indent: 50px;
+}
+.button-text {
+  margin: 27px 0;
+  text-decoration: none;
+}
+.button-text:hover {
+  text-decoration: underline;
+}
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+// Main Panels
+%panel {
+  width: 100%;
+  display: flex;
+  height: auto;
+  box-shadow: 0px -5px 20px $medium-gray;
+  float: left;
+  justify-content: center;
+
+  .content {
+    padding: 0 5%;
+    width: 100%;
+    max-width: 1000px;
+    float: left;
+    margin: 100px 0;
+    min-height: 350px;
+  }
+}
+
+// Primary Theme
+.primary {
+  @extend %panel;
+  background-color: $cream;
+  h1 {
+    color: $dark-green;
+  }
+  h2 {
+    color: black;
+  }
+  h3 {
+    color: $dark-green;
+  }
+  hr {
+    border-color: $dark-green;
+  }
+  .circle-icon {
+    background-color: $light-green;
+  }
+  .button-text {
+    font-weight: bold;
+    color: white;
+  }
+  .slider-button {
+    background-color: $light-green;
+  }
+}
+
+// Secondary Theme
+.secondary {
+  @extend %panel;
+  background-color: $medium-green;
+  h1 {
+    color: $cream;
+  }
+  h2 {
+    color: $medium-gray;
+  }
+  h3 {
+    color: $cream;
+  }
+  hr {
+    border-color: $cream;
+  }
+  .circle-icon {
+    background-color: $cream;
+  }
+  .button-text {
+    color: black;
+  }
+  .slider-button {
+    background-color: $cream;
+  }
+}
+
+/* Scroll Bar */
+/* Hide scrollbar for Chrome, Safari and Opera */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* ### MAIN COMPONENT ########################################################################### */
+.main {
+  font-family: Montserrat;
+  min-width: 750px;
+}
+.fixed-img {
+  background-image: url("images/alaska-glacier-selfie-2.jpg");
+  background-size: cover;
+  background-position: left;
+  background-attachment: fixed;
+  background-color: black;
+}
+
+/* ### TITLE COMPONENT ######################################################################### */
+.title {
+  padding-top: 7%;
+  padding-right: 7%;
+  padding-left: 7%;
+  padding-bottom: 17%;
+  h1 {
+    color: $dark-green;
+    font-size: 60pt;
+    min-width: font;
+    letter-spacing: 10pt;
+    text-shadow: 3px 3px 5px $medium-gray;
+    text-align: right;
+    font-weight: bold;
+
+    .small {
+      font-size: 50pt;
+      display: inline;
+    }
+  }
+  h2 {
+    color: $cream;
+    font-size: 32pt;
+    letter-spacing: 13px;
+    text-shadow: 3px 3px 5px $medium-gray;
+    text-align: right;
+    padding-right: 3px;
+  }
+}
+
+.scroll-down-button {
+  text-align: center;
+  padding-bottom: 10%;
+  .icon {
+    width: 10vh;
+    min-width: 40px;
+    height: 10vh;
+    min-height: 40px;
+    opacity: 0.5;
+    border-radius: 100%;
+  }
+  .icon:hover {
+    opacity: 1;
+    background-color: $medium-gray;
+    cursor: pointer;
+  }
+}
+
+/* ### PROFILE COMPONENT ####################################################################### */
+#profile {
+  .left-column {
+    float: left;
+    width: 52%;
+    min-width: 400px;
+    padding-right: 2%;
+  }
+  .right-column {
+    text-align: center;
+  }
+  table {
+    strong {
+      padding-right: 15px;
+    }
+  }
+  .profile-pic {
+    margin-top: 30px;
+    border-radius: 100%;
+    width: 150px;
+    background-color: $light-green;
+  }
+}
+
+/* ### ABOUT PAGE COMPONENT ######################################################################### */
+.banner-image {
+  background-image: url("images/pretty-flowers-dark-center.png");
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  background-color: black;
+  h1 {
+    color: $cream;
+    font-size: 40pt;
+    letter-spacing: 10pt;
+    text-shadow: 3px 3px 5px rgb(46, 46, 46);
+    font-weight: bold;
+    margin-top: 100px;
+    .small {
+      font-size: 30pt;
+      display: inline;
+      background-color: #00000000;
+    }
+  }
+}
+
+/* ### EXPERIENCE COMPONENT #################################################################### */
+#experience {
+  .title {
+    font-weight: bold;
+  }
+  .detail {
+    vertical-align: top;
+  }
+  .col-width {
+    width: 200px;
+  }
+  .spacer {
+    font-size: 15px;
+  }
+  ul {
+    margin: 1px;
+    padding-left: 27px;
+  }
+  li {
+    padding-bottom: 5px;
+  }
+}
+
+/* ### CONTACT COMPONENT ####################################################################### */
+// nothing specific needed yet
+
+/* ### STEP COMPONENT ####################################################################### */
+.step {
+  height: 300px;
+  width: 1000px;
+  float: left;
+  display: flex;
+  // border-width: 3px;
+  // border-style: solid;
+
+  img {
+    height: 280px;
+    width: 380px;
+    margin: 10px;
+    border-radius: 5px;
+  }
+  .text {
+    padding: 10px 20px;
+    width: 600px;
+  }
+}
+.filler {
+  height: 150px;
+}
+
+.link {
+  position: absolute;
+  color: White;
+  background-color: $medium-green;
+}
+
+#top-link {
+  left: 10px;
+  top: 10px;
+  font-size: 14pt;
+  padding: 15px;
+  border-radius: 15px;
+}
+
+#bottom-link {
+  margin-top: 40px;
+  font-size: 20pt;
+  padding: 15px;
+  border-radius: 20px;
+}

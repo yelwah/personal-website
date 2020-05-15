@@ -8,18 +8,19 @@ class Title extends Component {
     this.state = {
       active: 1,
     };
-    var element = document.getElementById("profile");
   }
   render() {
     return (
       <div>
         <div class="title">
-          <div class="title-heading">Jared Hawley</div>
-          <div class="title-sub-heading">INTERACTIVE RESUME</div>
+          <h1>
+            J<h1 class="small">ARED </h1>H<h1 class="small">AWLEY</h1>
+          </h1>
+          <h2>INTERACTIVE RESUME</h2>
         </div>
-        <div class="scroll-down">
+        <div class="scroll-down-button">
           <ScrollIntoView selector="#profile">
-            <img class="scroll-down-icon" src={scrollDownIcon} alt="scroll down"></img>
+            <img class="icon" src={scrollDownIcon} alt="scroll down"></img>
           </ScrollIntoView>
         </div>
       </div>

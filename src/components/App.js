@@ -1,20 +1,24 @@
 import React, { Component } from "react";
-import Title from "./title";
-import Profile from "./profile";
-import About from "./about";
-import Experience from "./experience";
-import Contact from "./contact";
+import Main from "./main";
+import AboutPage from "./about-page";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import ScrollToTop from "./scrollToTop.jsx";
 
 class App extends Component {
   state = {};
   render() {
     return (
-      <div class="app fixed-img">
-        <Title />
-        <Profile />
-        <About />
-        <Experience />
-        <Contact />
+      <div>
+        <Router>
+          <ScrollToTop />
+          <div>
+            <Switch>
+              <Route path="/" exact component={Main} />
+
+              <Route path="/about" component={AboutPage} />
+            </Switch>
+          </div>
+        </Router>
       </div>
     );
   }

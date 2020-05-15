@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import phoneIcon from "../images/icons/phone-icon-A8CEA5.png";
 import mailIcon from "../images/icons/gmail-icon-A8CEA5.png";
+import { CopyToClipboard } from "react-copy-to-clipboard";
 
 class Contact extends Component {
   constructor(props) {
@@ -9,25 +10,41 @@ class Contact extends Component {
       active: 1,
     };
   }
+
+  copyToClipboard = (str) => {
+    const el = document.createElement("textarea");
+    el.value = str;
+    document.body.appendChild(el);
+    el.select();
+    document.execCommand("copy");
+    document.body.removeChild(el);
+  };
+
   render() {
     return (
-      <div class="secondary">
+      <div class="secondary" id="contact">
         <div class="content">
-          <div class="h1-secondary">Contact</div>
+          <h1>Contact</h1>
+          <h2>Click to Copy to Clipboard</h2>
           <div class="icon-tray">
-            <div class="contact-icon-button">
-              <a href="" target="_blank" rel="noopener noreferrer">
-                <img class="circle-icon-white" src={phoneIcon}></img>
-              </a>
-              <div class="button-text">Call or text me at 609-556-2455</div>
+            <div class="slider-button-container">
+              <div>
+                <div class="slider-button" onClick={() => this.copyToClipboard("609-556-2466")}>
+                  <img class="circle-icon" src={phoneIcon} alt="Phone icon"></img>
+                  <div class="button-text">Call or text me at 609-556-2455</div>
+                </div>
+              </div>
             </div>
-          </div>
-          <div class="icon-tray">
-            <div class="contact-icon-button">
-              <a href="" target="_blank" rel="noopener noreferrer">
-                <img class="circle-icon-white" src={mailIcon}></img>
-              </a>
-              <div class="button-text">Email me at: j.yelwah@gmail.com</div>
+            <div class="slider-button-container">
+              <div>
+                <div
+                  class="slider-button"
+                  onClick={() => this.copyToClipboard("j.yelwah@gmail.com")}
+                >
+                  <img class="circle-icon" src={mailIcon} alt="Email Icon"></img>
+                  <div class="button-text">Email me at j.yelwah@gmail.com</div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
